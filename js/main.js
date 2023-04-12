@@ -1,3 +1,5 @@
+// Card Animation
+
 const el = document.querySelector(".card");
 const wrap = document.querySelector(".card__wrapper");
 let w = el.clientWidth;

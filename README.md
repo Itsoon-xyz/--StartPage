@@ -11,4 +11,7 @@ But this start page is customized and designed to be customizable, while being m
 | [download](https://chrome.google.com/webstore/detail/fast-new-tab-redirect/ohnfdmfkceojnmepofncbddpdicdjcoi) | [download](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) |
 3. Change your start page.
 
-source : [Fazzi (GitLab)](https://gitlab.com/fazzi/startpage)
+## Useful Links
+
+Card Anim : [Yuri akella Artiukh (CodePen)](https://codepen.io/akella/pen/XWYrRmb)<br>
+Inspired by : [Fazzi (GitLab)](https://gitlab.com/fazzi/startpage)
