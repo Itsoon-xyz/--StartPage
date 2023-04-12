@@ -27,29 +27,12 @@ html {
 
 body {
   display: flex;
+  padding: 100px 0 0 100px;
   color: var(--secondary-color);
   background: var(--bg-color);
-  padding: 1em;
+  /* padding: 1em; */
   font-family: JetBrains;
   transition: background 0.5s ease-out, color 0.5s ease-out;
-}
-
-.img {
-  height: 500px;
-  width: 292px;
-  margin-top: -1em;
-  margin-right: 2em;
-  border-radius: 6px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.12);
-  opacity: 1;
-  animation: fadeIn ease-in-out 0.5s;
-  transition: transform 0.2s, opacity 0.2s ease-out;
-  object-fit: cover;
-}
-
-.img:hover {
-  transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  cursor: pointer;
 }
 
 .fade-out {
@@ -156,3 +139,21 @@ link-grid {
   }
 }
 
+.card {
+  width: 380px;
+  height: 467px;
+  box-sizing: border-box;
+  position: relative;
+}
+.card__wrapper {
+  perspective: 600px;
+  position: absolute;
+  inset: 0;
+}
+.card__3d {
+  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 0 0 round 48px);
+  transition: transform 0.3s ease-out, clip-path 0.3s ease-out;
+}
