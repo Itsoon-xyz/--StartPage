@@ -1,0 +1,158 @@
+* {
+  margin: none;
+  padding: none;
+}
+@font-face {
+  font-family: "JetBrains";
+  src:
+    local('JetBrains Mono Regular Nerd Font Complete'),
+    url('./fonts/JetBrains.woff2'),
+    url('./fonts/JetBrains.ttf');
+}
+
+:root {
+  --title: #ec7c30; 
+  --color-1: #a882ee;
+  --color-2: #a8b8cf;
+  --bg-color: #1a1b26;
+}
+
+html {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 10%;
+  /* justify-content: start; */
+}
+
+body {
+  display: flex;
+  color: var(--secondary-color);
+  background: var(--bg-color);
+  padding: 1em;
+  font-family: JetBrains;
+  transition: background 0.5s ease-out, color 0.5s ease-out;
+}
+
+.img {
+  height: 500px;
+  width: 292px;
+  margin-top: -1em;
+  margin-right: 2em;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.12);
+  opacity: 1;
+  animation: fadeIn ease-in-out 0.5s;
+  transition: transform 0.2s, opacity 0.2s ease-out;
+  object-fit: cover;
+}
+
+.img:hover {
+  transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  cursor: pointer;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+greeting {
+  color: var(--title);
+  font-size: 2.2em;
+  font-weight: bold;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+url-list {
+  color: var(--color-1);
+}
+
+url-list li a {
+  color: var(--color-2);
+}
+
+.icon {
+  margin: -5px 10px;
+  width: 30px ;
+}
+
+a {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color ease-out 0.2s;
+}
+
+a:hover {
+  color:var(--link-accent-color);
+  font-style: italic;
+}
+
+.slide-in {
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+date {
+  font-size: 1.2em;
+  font-weight: 600;
+  grid-column: 1/-1;
+  text-align: center;
+  margin-bottom: 1em;
+  transition: color 0.2s ease-out;
+  color: var(--color-1);
+}
+
+url-list {
+  list-style-type: none;
+}
+
+li {
+  margin-left: 2.8em;
+}
+
+li:first-child {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 2em;
+  margin-left: 1em;
+  transition: color 0.2s ease-out;
+}
+
+/* GRID */
+
+link-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+}
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(100%);
+    opacity: 0;
+}
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
