@@ -13,5 +13,6 @@ But this start page is customized and designed to be customizable, while being m
 
 ## Useful Links
 
-Card Anim : <a target="_blank" href="https://codepen.io/akella/pen/XWYrRmb">Yuri akella Artiukh (CodePen)</a><br>
-Inspired by : <a target="_blank" href="https://gitlab.com/fazzi/startpage">Fazzi (GitLab)</a>
+Card Anim : [Yuri akella Artiukh (CodePen)](https://codepen.io/akella/pen/XWYrRmb)
+<br>
+Source : [Fazzi (GitLab)](https://gitlab.com/fazzi/startpage)
