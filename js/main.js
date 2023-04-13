@@ -9,8 +9,8 @@ el.addEventListener("mousemove", (e) => {
   let X = (e.clientX - b.left) / w;
   let Y = (e.clientY - b.top) / h;
 
-  let rX = -(X - 0.5) * 26;
-  let rY = (Y - 0.5) * 26;
+  let rX = -(X - 0.5) * 26 * -1;
+  let rY = (Y - 0.5) * 26 * -1;
 
   let bgX = 40 + 20 * X;
   let bgY = 40 + 20 * Y;
@@ -36,3 +36,4 @@ el.addEventListener("mousemove", (e) => {
     },100)
   });
 });
+
