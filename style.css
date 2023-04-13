@@ -191,12 +191,12 @@ link-grid {
   }
 }
 @media screen and (max-width: 800px) {
-  html {
+  .container {
     margin-left: 3%;
   }
 }
 @media screen and (max-width: 800px) {
-  html {
+  .container {
     margin-left: 5px;
   }
 }
@@ -206,8 +206,13 @@ link-grid {
   }
 }
 @media screen and (max-width: 685px) {
-  html {
-    justify-content: center;
+  .container {
+    margin-left: 0;
+    gap: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .card {
     display: none;
