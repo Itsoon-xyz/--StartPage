@@ -2,17 +2,19 @@
   margin: none;
   padding: none;
 }
-@font-face {
-  font-family: "JetBrains";
-  src: local("JetBrains Mono Regular Nerd Font Complete"),
-    url("./fonts/JetBrains.woff2"), url("./fonts/JetBrains.ttf");
-}
-
 :root {
+  /* Just comment the line if you don't want it */
   --title: #ec7c30;
   --color-1: #a882ee;
   --color-2: #a8b8cf;
   --bg-color: #1a1b26;
+  /* --background-img: url(./images/wallpaper.png); */
+  --background-blur: blur(0px);
+}
+@font-face {
+  font-family: "JetBrains";
+  src: local("JetBrains Mono Regular Nerd Font Complete"),
+    url("./fonts/JetBrains.woff2"), url("./fonts/JetBrains.ttf");
 }
 
 html {
@@ -20,15 +22,27 @@ html {
   display: flex;
   height: 100%;
   justify-content: start;
-  margin-left: 10%;
-  /* justify-content: center; */
+  background: var(--bg-color);
 }
 
 body {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: var(--background-blur);
+  background-size: cover;
+  background-position: center;
+  background-image: var(--background-img);
+}
+
+.container {
+  margin-left: 10%;
   display: flex;
   gap: 60px;
   color: var(--secondary-color);
-  background: var(--bg-color);
   font-family: JetBrains;
   transition: background 0.5s ease-out, color 0.5s ease-out;
 }
@@ -172,7 +186,7 @@ link-grid {
 }
 
 @media screen and (max-width: 1333px) {
-  body {
+  .container {
     gap: 20px;
   }
 }
@@ -187,7 +201,7 @@ link-grid {
   }
 }
 @media screen and (max-width: 730px) {
-  body {
+  .container {
     gap: 0px;
   }
 }
