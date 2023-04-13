@@ -8,7 +8,7 @@ But this start page is customized and designed to be customizable, while being m
 
 | Chrome | Firefox |
 | --- | --- |
-| <a target="_blank" href="https://chrome.google.com/webstore/detail/fast-new-tab-redirect/ohnfdmfkceojnmepofncbddpdicdjcoi">download</a> | <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/">download</a> |
+| [WebStore](https://chrome.google.com/webstore/detail/fast-new-tab-redirect-reb/acgndeknalmchjdgfibacnacagfmgkfm) | [Addons](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) |
 3. Change your start page.
 
 ## Useful Links
