@@ -3,11 +3,11 @@
   padding: none;
 }
 :root {
-  /* Just comment the line if you don't want it */
   --title: #ec7c30;
   --color-1: #a882ee;
   --color-2: #a8b8cf;
   --bg-color: #1a1b26;
+  /* Just comment the line if you don't want it */
   /* --background-img: url(./images/wallpaper.png); */
   --background-blur: blur(0px);
 }
