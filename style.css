@@ -4,14 +4,12 @@
 }
 @font-face {
   font-family: "JetBrains";
-  src:
-    local('JetBrains Mono Regular Nerd Font Complete'),
-    url('./fonts/JetBrains.woff2'),
-    url('./fonts/JetBrains.ttf');
+  src: local("JetBrains Mono Regular Nerd Font Complete"),
+    url("./fonts/JetBrains.woff2"), url("./fonts/JetBrains.ttf");
 }
 
 :root {
-  --title: #ec7c30; 
+  --title: #ec7c30;
   --color-1: #a882ee;
   --color-2: #a8b8cf;
   --bg-color: #1a1b26;
@@ -21,12 +19,14 @@ html {
   align-items: center;
   display: flex;
   height: 100%;
+  justify-content: start;
   margin-left: 10%;
-  /* justify-content: start; */
+  /* justify-content: center; */
 }
 
 body {
   display: flex;
+  gap: 60px;
   color: var(--secondary-color);
   background: var(--bg-color);
   font-family: JetBrains;
@@ -55,7 +55,7 @@ url-list li a {
 
 .icon {
   margin: -5px 10px;
-  width: 30px ;
+  width: 30px;
 }
 
 a {
@@ -66,11 +66,12 @@ a {
 }
 
 a:hover {
-  color:var(--link-accent-color);
+  color: var(--link-accent-color);
   font-style: italic;
 }
 
 .slide-in {
+  width: 380px;
   animation: slide-in 0.5s ease-in-out forwards;
 }
 
@@ -121,6 +122,26 @@ link-grid {
   /* grid-template-columns: repeat(3, 1fr); */
 }
 
+/* Card Animation */
+.card {
+  width: 292px;
+  height: 500px;
+  box-sizing: border-box;
+  position: relative;
+}
+.card__wrapper {
+  perspective: 600px;
+  position: absolute;
+  inset: 0;
+}
+.card__3d {
+  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 0 0 round 48px 0 0 48px);
+  transition: transform 0.3s ease-out, clip-path 0.3s ease-out;
+}
+
 /* ANIMATION */
 
 @keyframes fadeIn {
@@ -129,7 +150,7 @@ link-grid {
   }
   20% {
     opacity: 0;
-}
+  }
   100% {
     opacity: 1;
   }
@@ -143,28 +164,38 @@ link-grid {
   20% {
     transform: translateX(100%);
     opacity: 0;
-}
+  }
   100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
-.card {
-  width: 380px;
-  height: 467px;
-  box-sizing: border-box;
-  position: relative;
+@media screen and (max-width: 1333px) {
+  body {
+    gap: 20px;
+  }
 }
-.card__wrapper {
-  perspective: 600px;
-  position: absolute;
-  inset: 0;
+@media screen and (max-width: 800px) {
+  html {
+    margin-left: 3%;
+  }
 }
-.card__3d {
-  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
-  position: absolute;
-  inset: 0;
-  clip-path: inset(0 0 0 0 round 48px);
-  transition: transform 0.3s ease-out, clip-path 0.3s ease-out;
+@media screen and (max-width: 800px) {
+  html {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 730px) {
+  body {
+    gap: 0px;
+  }
+}
+@media screen and (max-width: 685px) {
+  html {
+    justify-content: center;
+  }
+  .card {
+    display: none;
+  }
 }
