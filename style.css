@@ -4,12 +4,12 @@
 }
 :root {
   --title: #ec7c30;
-  --color-1: #a882ee;
-  --color-2: #a8b8cf;
+  --primary-color: #a882ee;
+  --secondary-color: #a8b8cf;
   --bg-color: #1a1b26;
   /* Just comment the line if you don't want it */
-  /* --background-img: url(./images/wallpaper.png); */
-  --background-blur: blur(0px);
+  /* --bg-img: url(./images/wallpaper.png); */
+  --bg-blur: blur(0px);
 }
 @font-face {
   font-family: "JetBrains";
@@ -32,10 +32,10 @@ body {
   justify-content: start;
   width: 100%;
   height: 100%;
-  backdrop-filter: var(--background-blur);
+  backdrop-filter: var(--bg-blur);
   background-size: cover;
   background-position: center;
-  background-image: var(--background-img);
+  background-image: var(--bg-img);
 }
 
 .container {
@@ -60,11 +60,11 @@ greeting {
 }
 
 url-list {
-  color: var(--color-1);
+  color: var(--primary-color);
 }
 
 url-list li a {
-  color: var(--color-2);
+  color: var(--secondary-color);
 }
 
 .icon {
@@ -80,7 +80,7 @@ a {
 }
 
 a:hover {
-  color: var(--link-accent-color);
+  color: var(--secondary-color);
   font-style: italic;
 }
 
@@ -96,7 +96,7 @@ date {
   text-align: center;
   margin-bottom: 1em;
   transition: color 0.2s ease-out;
-  color: var(--color-1);
+  color: var(--primary-color);
 }
 
 url-list {
@@ -124,7 +124,7 @@ li:first-child {
   transition: all 0.2s ease-out;
 }
 .github:hover {
-  background-color: var(--color-1);
+  background-color: var(--primary-color);
   transition: all 0.2s ease-out;
 }
 
