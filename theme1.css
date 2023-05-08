@@ -1,6 +1,7 @@
 * {
   margin: none;
   padding: none;
+  font-family: "JetBrains";
 }
 :root {
   --title: #ec7c30;
@@ -43,7 +44,6 @@ body {
   display: flex;
   gap: 60px;
   color: var(--secondary-color);
-  font-family: JetBrains;
   transition: background 0.5s ease-out, color 0.5s ease-out;
 }
 
@@ -154,6 +154,30 @@ link-grid {
   inset: 0;
   clip-path: inset(0 0 0 0 round 48px 0 0 48px);
   transition: transform 0.3s ease-out, clip-path 0.3s ease-out;
+}
+/* SEARCH BAR */
+
+.search-container {
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+}
+.search-input {
+  color: var(--secondary-color);
+  font-size: 1.1em;
+  margin-left: 2.5em;
+  width: 130px;
+  border-radius: 5px;
+  background-color: #00000000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  cursor: text;
+}
+.search-input:hover:focus:enabled {
+  border: none;
+}
+.search-input::placeholder {
+  color: var(--secondary-color);
 }
 
 /* ANIMATION */

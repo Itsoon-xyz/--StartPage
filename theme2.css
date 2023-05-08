@@ -1,0 +1,244 @@
+* {
+  margin: none;
+  padding: none;
+  font-family: "JetBrains";
+}
+:root {
+  --title: #ffae00;
+  --primary-color: #ffae00;
+  --secondary-color: #b17d0c;
+  --bg-color: #1a1b26;
+  /* Just comment the line if you don't want it */
+  /* --bg-img: url(./images/wallpaper.png); */
+  --bg-blur: blur(0px);
+}
+@font-face {
+  font-family: "JetBrains";
+  src: local("JetBrains Mono Regular Nerd Font Complete"),
+    url("./fonts/JetBrains.woff2"), url("./fonts/JetBrains.ttf");
+}
+
+html {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: start;
+  background: var(--bg-color);
+}
+
+body {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: var(--bg-blur);
+  background-size: cover;
+  background-position: center;
+  background-image: var(--bg-img);
+}
+
+.container {
+  margin-left: 10%;
+  display: flex;
+  gap: 60px;
+  color: var(--secondary-color);
+  transition: background 0.5s ease-out, color 0.5s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+greeting {
+  color: var(--title);
+  font-size: 2.2em;
+  font-weight: bold;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+url-list {
+  color: var(--primary-color);
+}
+
+url-list li a {
+  color: var(--secondary-color);
+}
+
+.icon {
+  margin: -5px 10px;
+  width: 30px;
+}
+
+a {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color ease-out 0.2s;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+.slide-in {
+  width: 380px;
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+date {
+  font-size: 1.2em;
+  font-weight: 600;
+  grid-column: 1/-1;
+  text-align: center;
+  margin-bottom: 1em;
+  transition: color 0.2s ease-out;
+  color: var(--primary-color);
+}
+
+url-list {
+  list-style-type: none;
+}
+
+li {
+  margin-left: 2.8em;
+}
+
+li:first-child {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 2em;
+  margin-left: 1em;
+  transition: color 0.2s ease-out;
+}
+
+.github {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  border-radius: 20px;
+  transition: all 0.2s ease-out;
+}
+.github:hover {
+  background-color: var(--primary-color);
+  transition: all 0.2s ease-out;
+}
+
+/* GRID */
+
+link-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+/* Card Animation */
+.card {
+  width: 292px;
+  height: 500px;
+  box-sizing: border-box;
+  position: relative;
+}
+.card__wrapper {
+  perspective: 600px;
+  position: absolute;
+  inset: 0;
+}
+.card__3d {
+  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 0 0 round 48px 0 0 48px);
+  transition: transform 0.3s ease-out, clip-path 0.3s ease-out;
+}
+/* SEARCH BAR */
+
+.search-container {
+  /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+.search-input {
+  color: var(--secondary-color);
+  font-size: 1.1em;
+  margin-left: 2.5em;
+  width: 130px;
+  border-radius: 5px;
+  background-color: #00000000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  cursor: text;
+}
+.search-input:hover:focus:enabled {
+  border: none;
+}
+.search-input::placeholder {
+  color: var(--secondary-color);
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1333px) {
+  .container {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .container {
+    gap: 0px;
+  }
+}
+@media screen and (max-width: 685px) {
+  .container {
+    margin-left: 0;
+    gap: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card {
+    display: none;
+  }
+}

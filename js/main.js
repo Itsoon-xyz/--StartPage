@@ -15,7 +15,7 @@ el.addEventListener("mousemove", (e) => {
   let bgX = 40 + 20 * X;
   let bgY = 40 + 20 * Y;
 
-  console.log(X, Y);
+  // console.log(X, Y);
   document.documentElement.style.setProperty("--x", 100 * X + "%");
   document.documentElement.style.setProperty("--y", 100 * Y + "%");
 
@@ -27,13 +27,18 @@ el.addEventListener("mousemove", (e) => {
 
   el.addEventListener("mouseleave", (e) => {
     setTimeout(() => {
-        document.documentElement.style.setProperty("--x", "50%");
-        document.documentElement.style.setProperty("--y", "50%");
-        document.documentElement.style.setProperty("--bg-x", "50%");
-        document.documentElement.style.setProperty("--bg-y", "50%");
-        document.documentElement.style.setProperty("--r-x", "0deg");
-        document.documentElement.style.setProperty("--r-y", "0deg");
-    },100)
+      document.documentElement.style.setProperty("--x", "50%");
+      document.documentElement.style.setProperty("--y", "50%");
+      document.documentElement.style.setProperty("--bg-x", "50%");
+      document.documentElement.style.setProperty("--bg-y", "50%");
+      document.documentElement.style.setProperty("--r-x", "0deg");
+      document.documentElement.style.setProperty("--r-y", "0deg");
+    }, 100);
   });
 });
 
+// const searchInput = document.querySelectorAll(".search-input");
+
+// searchInput.addEventListener("mouseover", (e) => {
+//   searchInput.style.placeholder
+// })
