@@ -36,9 +36,20 @@ el.addEventListener("mousemove", (e) => {
     }, 100);
   });
 });
-
-// const searchInput = document.querySelectorAll(".search-input");
-
-// searchInput.addEventListener("mouseover", (e) => {
-//   searchInput.style.placeholder
-// })
+document.querySelector(".search-input").focus();
+document.addEventListener("keydown", function (event) {
+  if (
+    (event.key === "c" && document.activeElement.tagName !== "INPUT") ||
+    (event.key === "Enter" &&
+      document.activeElement === document.querySelector("button"))
+  ) {
+    window.location.href = "https://chat.openai.com";
+  }
+  if (
+    event.key === "C" &&
+    document.activeElement.tagName !== "INPUT" &&
+    document.activeElement.tagName !== "BUTTON"
+  ) {
+    window.open("https://chat.openai.com", "_blank");
+  }
+});
